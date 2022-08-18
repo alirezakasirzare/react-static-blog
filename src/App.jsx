@@ -1,8 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './views/Home';
+
 function App() {
   return (
-    <div>
-      <header>salam</header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
