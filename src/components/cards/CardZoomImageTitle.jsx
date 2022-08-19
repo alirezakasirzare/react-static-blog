@@ -1,6 +1,6 @@
 import Zoom from 'react-medium-image-zoom';
 
-function ZoomImageCardTitle({ image, title }) {
+function CardZoomImageTitle({ image, title }) {
   return (
     <div className="card h-100">
       <Zoom>
@@ -14,4 +14,4 @@ function ZoomImageCardTitle({ image, title }) {
   );
 }
 
-export default ZoomImageCardTitle;
+export default CardZoomImageTitle;

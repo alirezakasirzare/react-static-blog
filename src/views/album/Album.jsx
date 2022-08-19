@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import Default from '../../layouts/Default';
 import useReqGet from '../../hooks/useReqGet';
 import TitlePage from '../../components/titles/TitlePage';
-import ZoomImageCardTitle from '../../components/cards/ZoomImageCardTitle';
+import CardZoomImageTitle from '../../components/cards/CardZoomImageTitle';
 
 function Album() {
   const { id: albumId } = useParams();
@@ -25,7 +25,7 @@ function Album() {
         {images.map((image, index) => {
           return (
             <div className="col-12 col-md-6 col-xl-4" key={index}>
-              <ZoomImageCardTitle image={image.url} title={image.title} />
+              <CardZoomImageTitle image={image.url} title={image.title} />
             </div>
           );
         })}

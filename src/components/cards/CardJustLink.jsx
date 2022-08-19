@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function SimpleCardLink({ path, text }) {
+function CardJustLink({ path, text }) {
   return (
     <div className="card h-100">
       <div className="card-body d-flex align-items-center justify-content-center text-center">
@@ -10,4 +10,4 @@ function SimpleCardLink({ path, text }) {
   );
 }
 
-export default SimpleCardLink;
+export default CardJustLink;

@@ -3,7 +3,7 @@ import Default from '../../layouts/Default';
 import DListItems from '../../components/lists/DisListItems';
 import TitleUndreline from '../../components/titles/TitleUndreline';
 import useReqGet from '../../hooks/useReqGet';
-import SimpleCardLink from '../../components/cards/SimpleCardLink';
+import CardJustLink from '../../components/cards/CardJustLink';
 function User() {
   const { id: userId } = useParams();
   // user info
@@ -42,7 +42,7 @@ function User() {
         {albums.map((album, index) => {
           return (
             <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-              <SimpleCardLink path={`/albums/${album.id}`} text={album.title} />
+              <CardJustLink path={`/albums/${album.id}`} text={album.title} />
             </div>
           );
         })}

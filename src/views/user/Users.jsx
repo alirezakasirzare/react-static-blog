@@ -1,6 +1,6 @@
 import useReqGet from '../../hooks/useReqGet';
 import Default from '../../layouts/Default';
-import SimpleCardLink from '../../components/cards/SimpleCardLink';
+import CardJustLink from '../../components/cards/CardJustLink';
 import TitlePage from '../../components/titles/TitlePage';
 
 function Users() {
@@ -17,7 +17,7 @@ function Users() {
         {users.map((user, index) => {
           return (
             <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-              <SimpleCardLink path={`/users/${user.id}`} text={user.name} />
+              <CardJustLink path={`/users/${user.id}`} text={user.name} />
             </div>
           );
         })}

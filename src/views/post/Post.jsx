@@ -1,4 +1,4 @@
-import SimpleCardContent from 'components/cards/SimpleCardContent';
+import CardTitleSubtitleBody from 'components/cards/CardTitleSubtitleBody';
 import TitleUndreline from 'components/titles/TitleUndreline';
 import useReqGet from 'hooks/useReqGet';
 import Default from 'layouts/Default';
@@ -34,7 +34,7 @@ function Post() {
       {comments.map((comment, index) => {
         return (
           <div className="mb-2" key={index}>
-            <SimpleCardContent
+            <CardTitleSubtitleBody
               text={comment.body}
               title={comment.name}
               subtitle={comment.email}
