@@ -7,6 +7,7 @@ import User from './views/user/User';
 import Albums from './views/album/Albums';
 import Album from './views/album/Album';
 import Posts from './views/post/Posts';
+import Post from './views/post/Post';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Route path="/connect-us" element={<ConnectUs />} />
       {/* posts */}
       <Route path="/posts" element={<Posts />} />
-      <Route path="/posts/:id" element={<Posts />} />
+      <Route path="/posts/:id" element={<Post />} />
       {/* users */}
       <Route path="/users" element={<Users />} />
       <Route path="/users/:id" element={<User />} />

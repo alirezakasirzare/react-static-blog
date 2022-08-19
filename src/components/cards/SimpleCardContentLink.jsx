@@ -1,15 +1,20 @@
-function SimpleCardContent({ title, text, subtitle }) {
+import { Link } from 'react-router-dom';
+
+function SimpleCardContentLink({ title, text, path }) {
   return (
     <div className="card h-100">
       <div className="card-body d-flex flex-column justify-content-between">
         <div className="mb-3">
           <h5 className="card-title">{title}</h5>
-          <h6 className="card-subtitle mb-2 text-muted">{subtitle}</h6>
           <p className="card-text">{text}</p>
         </div>
+
+        <Link to={path} className="btn btn-primary">
+          see post
+        </Link>
       </div>
     </div>
   );
 }
 
-export default SimpleCardContent;
+export default SimpleCardContentLink;

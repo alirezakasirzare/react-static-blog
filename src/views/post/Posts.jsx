@@ -1,4 +1,4 @@
-import SimpleCardContent from 'components/cards/SimpleCardContent';
+import SimpleCardContentLink from 'components/cards/SimpleCardContentLink';
 import TitlePage from 'components/titles/TitlePage';
 import useReqGet from 'hooks/useReqGet';
 import Default from 'layouts/Default';
@@ -19,7 +19,7 @@ function Posts() {
         {posts.map((post, index) => {
           return (
             <div className="col-12 col-lg-6" key={index}>
-              <SimpleCardContent
+              <SimpleCardContentLink
                 path={`/posts/${post.id}`}
                 title={post.title}
                 text={post.body}
