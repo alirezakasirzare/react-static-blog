@@ -6,6 +6,7 @@ import Users from './views/user/Users';
 import User from './views/user/User';
 import Albums from './views/albums/Albums';
 import Album from './views/albums/Album';
+import Posts from './views/Posts';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/connect-us" element={<ConnectUs />} />
+      <Route path="/posts" element={<Posts />} />
       {/* users */}
       <Route path="/users" element={<Users />} />
       <Route path="/users/:id" element={<User />} />

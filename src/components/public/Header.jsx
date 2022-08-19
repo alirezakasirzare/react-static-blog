@@ -8,6 +8,10 @@ function Header() {
       path: '/',
     },
     {
+      text: 'Posts',
+      path: '/posts',
+    },
+    {
       text: 'Users',
       path: '/users',
     },
