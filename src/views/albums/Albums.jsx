@@ -4,8 +4,8 @@ import SimpleCardLink from '../../components/cards/SimpleCardLink';
 import TitlePage from '../../components/titles/TitlePage';
 
 function Users() {
-  const { data: users } = useReqGet(
-    'https://jsonplaceholder.typicode.com/users',
+  const { data: albums } = useReqGet(
+    'https://jsonplaceholder.typicode.com/albums',
     []
   );
 
@@ -15,10 +15,10 @@ function Users() {
 
       {/* album list */}
       <div className="row g-1">
-        {users.map((user, index) => {
+        {albums.map((album, index) => {
           return (
             <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-              <SimpleCardLink path={`/users/${user.id}`} text={user.name} />
+              <SimpleCardLink path={`/albums/${album.id}`} text={album.title} />
             </div>
           );
         })}

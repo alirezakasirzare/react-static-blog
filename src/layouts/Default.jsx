@@ -4,7 +4,7 @@ function Default({ children }) {
   return (
     <>
       <Header />
-      <main className="container mb-5">{children}</main>
+      <main className="container mb-5 pt-5r">{children}</main>
     </>
   );
 }
