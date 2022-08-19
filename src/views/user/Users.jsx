@@ -14,9 +14,7 @@ function Users() {
         {users.map((user, index) => {
           return (
             <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-              <div className="card">
-                <SimpleCardLink path={`/users/${user.id}`} text={user.name} />
-              </div>
+              <SimpleCardLink path={`/users/${user.id}`} text={user.name} />
             </div>
           );
         })}

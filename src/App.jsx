@@ -9,10 +9,14 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/users/:id" element={<User />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/connect-us" element={<ConnectUs />} />
+      {/* users */}
+      <Route path="/users" element={<Users />} />
+      <Route path="/users/:id" element={<User />} />
+      {/* albums */}
+      <Route path="/albums" element={<Users />} />
+      <Route path="/albums/:id" element={<User />} />
     </Routes>
   );
 }
