@@ -1,48 +1,43 @@
 import { useParams } from 'react-router-dom';
 import Default from '../../layouts/Default';
-import DListItems from '../../components/lists/DisListItems';
-import TitleUndreline from '../../components/titles/TitleUndreline';
 import useReqGet from '../../hooks/useReqGet';
-import SimpleCardLink from '../../components/cards/SimpleCardLink';
-function User() {
-  const { id: userId } = useParams();
-  // user info
-  const { data: user } = useReqGet(
-    `https://jsonplaceholder.typicode.com/users/${userId}`
+import Zoom from 'react-medium-image-zoom';
+import TitlePage from '../../components/titles/TitlePage';
+
+function Album() {
+  const { id: albumId } = useParams();
+  // album info
+  const { data: album } = useReqGet(
+    `https://jsonplaceholder.typicode.com/albums/${albumId}`
   );
-  // albums info
-  const { data: albums } = useReqGet(
-    `https://jsonplaceholder.typicode.com/albums?userId=${userId}`,
+  // images of the album
+  const { data: images } = useReqGet(
+    `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`,
     []
   );
 
   return (
     <Default>
-      {/* user info */}
-      <TitleUndreline>user info</TitleUndreline>
+      <TitlePage>album - {album && album.title}</TitlePage>
 
-      {user && (
-        <div className="mb-4">
-          <dl>
-            <DListItems title="name" text={user.name} />
-            <DListItems title="username" text={user.username} />
-            <DListItems title="email" text={user.email} />
-            <DListItems title="phone" text={user.phone} />
-            <DListItems title="city" text={user.address.city} />
-            <DListItems title="website" text={user.website} />
-            <DListItems title="company name" text={user.company.name} />
-          </dl>
-        </div>
-      )}
-
-      {/* albums */}
-      <TitleUndreline>albums</TitleUndreline>
-
-      <div className="row g-1">
-        {albums.map((album, index) => {
+      {/* album images */}
+      <div className="row g-3">
+        {images.map((image, index) => {
           return (
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-              <SimpleCardLink path={`/albums/${album.id}`} text={album.title} />
+            <div className="col-12 col-md-6 col-xl-4" key={index}>
+              <div className="card h-100 shadow">
+                <Zoom>
+                  <img
+                    src={image.url}
+                    className="card-img-top"
+                    alt={image.title}
+                  />
+                </Zoom>
+
+                <div className="card-body">
+                  <h5 className="card-title">{image.title}</h5>
+                </div>
+              </div>
             </div>
           );
         })}
@@ -51,4 +46,4 @@ function User() {
   );
 }
 
-export default User;
+export default Album;

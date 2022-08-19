@@ -32,16 +32,16 @@ function Header() {
           React blog
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#mobile-navbar"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* navigation links */}
-        <div class="collapse navbar-collapse" id="mobile-navbar">
+        <div className="collapse navbar-collapse" id="mobile-navbar">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {navRoutes.map((route, index) => {
               return (

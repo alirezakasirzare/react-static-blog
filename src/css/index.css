@@ -2,3 +2,9 @@
 .pt-5r {
   padding-top: 5rem;
 }
+
+/* zoom module */
+[data-rmiz-btn-zoom],
+[data-rmiz-btn-unzoom] {
+  display: none;
+}

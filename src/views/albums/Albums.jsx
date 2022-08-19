@@ -3,7 +3,7 @@ import Default from '../../layouts/Default';
 import SimpleCardLink from '../../components/cards/SimpleCardLink';
 import TitlePage from '../../components/titles/TitlePage';
 
-function Users() {
+function Albums() {
   const { data: albums } = useReqGet(
     'https://jsonplaceholder.typicode.com/albums',
     []
@@ -27,4 +27,4 @@ function Users() {
   );
 }
 
-export default Users;
+export default Albums;
