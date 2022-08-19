@@ -1,9 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './views/Home';
-import Users from './views/user/Users';
 import AboutUs from './views/AboutUs';
 import ConnectUs from './views/ConnectUs';
+import Users from './views/user/Users';
 import User from './views/user/User';
+import Albums from './views/albums/Albums';
+import Album from './views/albums/Album';
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
       <Route path="/users" element={<Users />} />
       <Route path="/users/:id" element={<User />} />
       {/* albums */}
-      <Route path="/albums" element={<Users />} />
-      <Route path="/albums/:id" element={<User />} />
+      <Route path="/albums" element={<Albums />} />
+      <Route path="/albums/:id" element={<Album />} />
     </Routes>
   );
 }

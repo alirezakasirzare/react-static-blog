@@ -11,8 +11,9 @@ function Users() {
 
   return (
     <Default>
-      <TitlePage>Users</TitlePage>
-      {/* users list */}
+      <TitlePage>Albums</TitlePage>
+
+      {/* album list */}
       <div className="row g-1">
         {users.map((user, index) => {
           return (

@@ -12,6 +12,10 @@ function Header() {
       path: '/users',
     },
     {
+      text: 'Albums',
+      path: '/albums',
+    },
+    {
       text: 'About us',
       path: '/about-us',
     },
