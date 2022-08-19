@@ -2,7 +2,7 @@ import Zoom from 'react-medium-image-zoom';
 
 function ZoomImageCardTitle({ image, title }) {
   return (
-    <div className="card h-100 shadow">
+    <div className="card h-100">
       <Zoom>
         <img src={image} className="card-img-top" alt={title} />
       </Zoom>

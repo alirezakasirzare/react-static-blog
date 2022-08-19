@@ -18,7 +18,7 @@ function Album() {
 
   return (
     <Default>
-      <TitlePage>album - {album && album.title}</TitlePage>
+      <TitlePage>Album - {album && album.title}</TitlePage>
 
       {/* album images */}
       <div className="row g-3">
