@@ -1,7 +1,7 @@
-import SimpleCardContent from '../components/cards/SimpleCardContent';
-import TitlePage from '../components/titles/TitlePage';
-import useReqGet from '../hooks/useReqGet';
-import Default from '../layouts/Default';
+import SimpleCardContent from 'components/cards/SimpleCardContent';
+import TitlePage from 'components/titles/TitlePage';
+import useReqGet from 'hooks/useReqGet';
+import Default from 'layouts/Default';
 
 function Posts() {
   // posts list

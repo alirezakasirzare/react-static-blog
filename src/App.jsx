@@ -4,9 +4,9 @@ import AboutUs from './views/AboutUs';
 import ConnectUs from './views/ConnectUs';
 import Users from './views/user/Users';
 import User from './views/user/User';
-import Albums from './views/albums/Albums';
-import Album from './views/albums/Album';
-import Posts from './views/Posts';
+import Albums from './views/album/Albums';
+import Album from './views/album/Album';
+import Posts from './views/post/Posts';
 
 function App() {
   return (
@@ -14,7 +14,9 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/connect-us" element={<ConnectUs />} />
+      {/* posts */}
       <Route path="/posts" element={<Posts />} />
+      <Route path="/posts/:id" element={<Posts />} />
       {/* users */}
       <Route path="/users" element={<Users />} />
       <Route path="/users/:id" element={<User />} />
